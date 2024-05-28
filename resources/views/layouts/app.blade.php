@@ -38,11 +38,14 @@
                         @guest
                         @else
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('guru.index') }}">{{ __('Produk') }}</a>
+                            <a class="nav-link" href="{{ route('guru.index') }}">{{ __('Guru') }}</a>
                         </li>
-                        {{-- <li class="nav-item">
-                            <a class="nav-link" href="{{ route('merek.index') }}">{{ __('Merek') }}</a>
-                        </li> --}}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('kelas.index')}}">{{ __('Kelas') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('mapel.index')}}">{{ __('Mapel') }}</a>
+                        </li>
                         @endguest
                     </ul>
 

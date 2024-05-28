@@ -25,6 +25,7 @@
                                     <td>Agama</td>
                                     <td>Tempat Lahir</td>
                                     <td>Tanggal Lahir</td>
+                                    <td>Foto</td>
                                     <td>Aksi</td>
                                 </tr>
                             </thead>
@@ -35,7 +36,13 @@
                                     <td>{{ $no++ }}</td>
                                     <td>{{ $data->nip }}</td>
                                     <td>{{ $data->nama }}</td>
-                                    <td>{{ $data->jenis_kelamin }}</td>
+                                    <td>
+                                        @if ( $data->jenis_kelamin === 0 )
+                                            Laki-laki
+                                        @else
+                                            Perempuan
+                                        @endif
+                                    </td>
                                     <td>{{ $data->agama }}</td>
                                     <td>{{ $data->tempat_lahir }}</td>
                                     <td>{{ $data->tanggal_lahir }}</td>

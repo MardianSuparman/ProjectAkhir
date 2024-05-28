@@ -122,11 +122,11 @@ class GuruController extends Controller
         $image->storeAs('public/gurus', $image->hashName());
 
         // delete produk
-        Storage::delete('public/gurus', $guru->image);
+        Storage::delete('public/gurus', $guru->foto);
 
         $guru->foto=$image->hashName();
         $guru->save();
-        return view()->route('guru.index');
+        return redirect()->route('guru.index');
 
     }
 

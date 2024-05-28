@@ -23,4 +23,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::resource('guru', App\Http\Controllers\GuruController::class)->middleware('auth');
 
+Route::resource('kelas', App\Http\Controllers\KelasController::class)->middleware('auth');
 
+Route::resource('mapel', App\Http\Controllers\MapelController::class)->middleware('auth');
