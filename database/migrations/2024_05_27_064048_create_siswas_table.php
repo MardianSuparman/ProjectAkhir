@@ -22,6 +22,9 @@ return new class extends Migration
             $table->string('tanggal_lahir');
             $table->bigInteger('kelas')->unsigned();
             $table->bigInteger('jurusan')->unsigned();
+            $table->string('foto');
+            $table->foreign('kelas')->references('id')->on('kelas')->ondelete('cascade');
+            $table->foreign('jurusan')->references('id')->on('jurusans')->ondelete('cascade');
             $table->timestamps();
         });
     }

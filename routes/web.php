@@ -26,3 +26,7 @@ Route::resource('guru', App\Http\Controllers\GuruController::class)->middleware(
 Route::resource('kelas', App\Http\Controllers\KelasController::class)->middleware('auth');
 
 Route::resource('mapel', App\Http\Controllers\MapelController::class)->middleware('auth');
+
+Route::resource('jurusan', App\Http\Controllers\JurusanController::class)->middleware('auth');
+
+Route::resource('siswa', App\Http\Controllers\SiswaController::class)->middleware('auth');

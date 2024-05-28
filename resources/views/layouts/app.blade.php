@@ -46,6 +46,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('mapel.index')}}">{{ __('Mapel') }}</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('jurusan.index')}}">{{ __('Jurusan') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('siswa.index')}}">{{ __('Siswa') }}</a>
+                        </li>
                         @endguest
                     </ul>
 
