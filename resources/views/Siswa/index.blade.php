@@ -46,8 +46,8 @@
                                     <td>{{ $data->agama }}</td>
                                     <td>{{ $data->tempat_lahir }}</td>
                                     <td>{{ $data->tanggal_lahir }}</td>
-                                    <td>{{ $data->kelas->kelas }}</td>
-                                    <td>{{ $data->jurusan->jurusan }}</td>
+                                    <td>{{ $data->kelas->nama_kelas }}</td>
+                                    <td>{{ $data->jurusan->nama_jurusan }}</td>
                                     <td>
                                         <img src="{{ asset('/storage/siswas/'. $data->foto) }}" class="rounded"
                                             style="width: 150px">

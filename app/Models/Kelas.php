@@ -17,7 +17,7 @@ class Kelas extends Model
     }
 
     public function Siswa(){
-        return $this->hashMany(Siswa::class, 'kelas');
+        return $this->hashOne(Siswa::class, 'kelas');
     }
 
 }

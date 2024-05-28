@@ -9,9 +9,11 @@ class Jurusan extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['jurusan', 'wali_kelas'];
+    protected $visible = ['jurusan', 'wali_kelas'];
 
     public function Siswa(){
-        return $this->hashMany(Siswa::class, 'jurusan');
+        return $this->hashOne(Siswa::class, 'jurusan');
     }
 
 }
