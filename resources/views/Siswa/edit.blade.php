@@ -93,7 +93,7 @@
                         <div class="mb-3">
                             <div class="mb-3">
                                 <label for="">Kelas</label>
-                                <select name="kelas" id="" class="form-control">
+                                <select name="id_kelas" id="" class="form-control">
                                     @foreach ($kelas as $item)
                                         <option value="{{$item->id}}">{{ $item->nama_kelas }}</option>
                                     @endforeach
@@ -104,7 +104,7 @@
                         <div class="mb-3">
                             <div class="mb-3">
                                 <label for="">Jurusan</label>
-                                <select name="jurusan" id="" class="form-control">
+                                <select name="id_jurusan" id="" class="form-control">
                                     @foreach ($jurusan as $item)
                                         <option value="{{$item->id}}">{{ $item->nama_jurusan }}</option>
                                     @endforeach

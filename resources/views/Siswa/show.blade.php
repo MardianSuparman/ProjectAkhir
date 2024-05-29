@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-conten-center">
+    <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
@@ -31,7 +31,7 @@
                         @endif
                     </p>
                     <p class="tmt-3">
-                        {{ $siswa->id_jurusan }} jurusan {{ $siswa->id_jurusan }}
+                        {{ $siswa->Kelas->nama_kelas }} jurusan {{ $siswa->jurusan->nama_jurusan }}
                     </p>
                 </div>
             </div>

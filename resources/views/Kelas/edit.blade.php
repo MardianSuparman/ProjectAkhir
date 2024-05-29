@@ -21,7 +21,7 @@
                         @csrf
                         <div class="mb-3">
                             <label class="form-label">kelas</label>
-                            <input type="text" class="form-control @error('kelas') is-invalid @enderror" name="kelas"
+                            <input type="text" class="form-control @error('kelas') is-invalid @enderror" name="nama_kelas"
                                 value="{{ $kelas->kelas }}" placeholder="kelas" required>
                             @error('kelas')
                             <span class="invalid-feedback" role="alert">
@@ -32,7 +32,7 @@
 
                         <div class="mb-3">
                             <label for="">Wali Kelas</label>
-                            <select name="wali_kelas" id="" class="form-control">
+                            <select name="id_guru" id="" class="form-control">
                                 @foreach ($guru as $item)
                                     <option value="{{$item->id}}">{{ $item->nama }}</option>
                                 @endforeach

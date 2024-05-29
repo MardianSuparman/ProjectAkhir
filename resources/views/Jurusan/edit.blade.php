@@ -21,7 +21,7 @@
                         @csrf
                         <div class="mb-3">
                             <label class="form-label">jurusan</label>
-                            <input type="text" class="form-control @error('jurusan') is-invalid @enderror" name="jurusan"
+                            <input type="text" class="form-control @error('jurusan') is-invalid @enderror" name="nama_jurusan"
                                 value="{{ $jurusan->jurusan }}" placeholder="Nama Jurusan" required>
                             @error('jurusan')
                             <span class="invalid-feedback" role="alert">
