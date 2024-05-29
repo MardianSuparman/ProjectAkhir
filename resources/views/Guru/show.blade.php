@@ -20,6 +20,10 @@
                     <p class="tmt-3">
                         {{ $guru->nip }}
                     </p>
+                    <p class="tmt-3">
+                        {{ $guru->tempat_lahir }} , {{ $guru->tanggal_lahir }}
+                    </p>
+                    <P>
                         {{ $guru->agama }}
                     </p>
                     <p class="tmt-3">
@@ -28,9 +32,6 @@
                             @else
                                 Perempuan
                             @endif
-                    </p>
-                    <p class="tmt-3">
-                        {{ $guru->tempat_lahir }} , {{ $guru->tanggal_lahir }}
                     </p>
                 </div>
             </div>

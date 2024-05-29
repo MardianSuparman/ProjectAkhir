@@ -20,11 +20,11 @@ return new class extends Migration
             $table->string('agama');
             $table->string('tempat_lahir');
             $table->string('tanggal_lahir');
-            $table->bigInteger('kelas')->unsigned();
-            $table->bigInteger('jurusan')->unsigned();
+            $table->bigInteger('id_kelas')->unsigned();
+            $table->bigInteger('id_jurusan')->unsigned();
             $table->string('foto');
-            $table->foreign('kelas')->references('id')->on('kelas')->ondelete('cascade');
-            $table->foreign('jurusan')->references('id')->on('jurusans')->ondelete('cascade');
+            $table->foreign('id_kelas')->references('id')->on('kelas')->ondelete('cascade');
+            $table->foreign('id_jurusan')->references('id')->on('jurusans')->ondelete('cascade');
             $table->timestamps();
         });
     }

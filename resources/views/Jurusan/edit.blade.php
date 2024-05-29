@@ -22,7 +22,7 @@
                         <div class="mb-3">
                             <label class="form-label">jurusan</label>
                             <input type="text" class="form-control @error('jurusan') is-invalid @enderror" name="jurusan"
-                                value="{{ $jurusan->jurusan }}" placeholder="jurusan" required>
+                                value="{{ $jurusan->jurusan }}" placeholder="Nama Jurusan" required>
                             @error('jurusan')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>

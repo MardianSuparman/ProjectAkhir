@@ -28,7 +28,7 @@
                                 @forelse ( $jurusan as $data)
                                 <tr>
                                     <td>{{ $no++ }}</td>
-                                    <td>{{ $data->jurusan }}</td>
+                                    <td>{{ $data->nama_jurusan }}</td>
                                     <td>
                                         <form action="{{ route('jurusan.destroy', $data->id) }}" method="POST">
                                             @csrf

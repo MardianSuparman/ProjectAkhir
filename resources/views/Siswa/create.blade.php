@@ -20,7 +20,7 @@
                         <div class="mb-3">
                             <label class="form-label">Nama Siswa</label>
                             <input type="text" class="form-control @error('nama') is-invalid @enderror" name="nama"
-                                value="{{ old('nama') }}" placeholder="nama" required>
+                                value="{{ old('nama') }}" placeholder="Nama Siswa" required>
                             @error('nama')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -57,7 +57,7 @@
                         <div class="mb-3">
                             <label class="form-label">Agama</label>
                             <input type="text" class="form-control @error('agama') is-invalid @enderror" name="agama"
-                                value="{{ old('agama') }}" placeholder="agama" required>
+                                value="{{ old('agama') }}" placeholder="Agama" required>
                             @error('agama')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -90,9 +90,9 @@
                         <div class="mb-3">
                             <div class="mb-3">
                                 <label for="">Kelas</label>
-                                <select name="kelas" id="" class="form-control">
+                                <select name="id_kelas" id="" class="form-control">
                                     @foreach ($kelas as $item)
-                                        <option value="{{$item->id}}">{{ $item->kelas }}</option>
+                                        <option value="{{$item->id}}">{{ $item->nama_kelas }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -101,9 +101,9 @@
                         <div class="mb-3">
                             <div class="mb-3">
                                 <label for="">Jurusan</label>
-                                <select name="jurusan" id="" class="form-control">
+                                <select name="id_jurusan" id="" class="form-control">
                                     @foreach ($jurusan as $item)
-                                        <option value="{{$item->id}}">{{ $item->jurusan }}</option>
+                                        <option value="{{$item->id}}">{{ $item->nama_jurusan }}</option>
                                     @endforeach
                                 </select>
                             </div>

@@ -23,7 +23,7 @@
                         <div class="mb-3">
                             <label class="form-label">NIP</label>
                             <input type="text" class="form-control @error('nip') is-invalid @enderror" name="nip"
-                                value="{{ $guru->nip }}" placeholder="nip " required>
+                                value="{{ $guru->nip }}" placeholder="NIP " required>
                             @error('nip')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -70,7 +70,7 @@
                         <div class="mb-3">
                             <label class="form-label">Agama</label>
                             <textarea class="form-control" class="form-control @error('agama') is-invalid @enderror"
-                                name="agama" rows="3" placeholder="agama"
+                                name="agama" rows="3" placeholder="Agama"
                                 required>{{ $guru->agama }}</textarea>
                             @error('agama')
                             <span class="invalid-feedback" role="alert">

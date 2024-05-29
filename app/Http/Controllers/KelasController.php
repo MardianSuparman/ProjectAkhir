@@ -45,12 +45,12 @@ class KelasController extends Controller
     {
         // vallidate form
         $this->validate($request, [
-            'kelas'=> 'required',
+            'nama_kelas'=> 'required',
         ]);
 
         $kelas = new kelas();
-        $kelas->kelas = $request->kelas;
-        $kelas->wali_kelas = $request->wali_kelas;
+        $kelas->nama_kelas = $request->nama_kelas;
+        $kelas->id_guru = $request->id_guru;
 
         // upload img
         // $image = $request->file('image');
@@ -96,12 +96,12 @@ class KelasController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'kelas'=> 'required',
+            'nama_kelas'=> 'required',
         ]);
 
         $kelas=kelas::findOrFail($id);
-        $kelas->kelas=$request->kelas;
-        $kelas->wali_kelas = $request->wali_kelas;
+        $kelas->nama_kelas=$request->nama_kelas;
+        $kelas->id_guru = $request->id_guru;
 
         // upload kelas
         //     $image=$request->file('image');

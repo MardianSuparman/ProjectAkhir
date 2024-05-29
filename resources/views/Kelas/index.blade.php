@@ -29,7 +29,7 @@
                                 @forelse ( $kelas as $data)
                                 <tr>
                                     <td>{{ $no++ }}</td>
-                                    <td>{{ $data->kelas }}</td>
+                                    <td>{{ $data->nama_kelas }}</td>
                                     <td>{{ $data->guru->nama}}</td>
                                     <td>
                                         <form action="{{ route('kelas.destroy', $data->id) }}" method="POST">

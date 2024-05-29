@@ -20,7 +20,7 @@
                         <div class="mb-3">
                             <label class="form-label">Mapel</label>
                             <input type="text" class="form-control @error('mapel') is-invalid @enderror" name="mapel"
-                                value="{{ old('mapel') }}" placeholder="mapel" required>
+                                value="{{ old('mapel') }}" placeholder="Mapel" required>
                             @error('mapel')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>

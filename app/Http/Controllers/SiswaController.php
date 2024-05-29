@@ -49,8 +49,8 @@ class SiswaController extends Controller
             'agama'=>'required',
             'tempat_lahir'=>'required',
             'tanggal_lahir'=>'required',
-            'kelas'=>'required',
-            'jurusan'=>'required',
+            'id_kelas'=>'required',
+            'id_jurusan'=>'required',
             'foto'=>'required|image|mimes:jpeg,jpg,png|max:2048',
         ]);
 
@@ -60,12 +60,12 @@ class SiswaController extends Controller
         $siswa -> agama = $request -> agama;
         $siswa -> tempat_lahir = $request -> tempat_lahir;
         $siswa -> tanggal_lahir = $request -> tanggal_lahir;
-        $siswa -> kelas = $request -> kelas;
-        $siswa -> jurusan = $request -> jurusan;
+        $siswa -> id_kelas = $request -> id_kelas;
+        $siswa -> id_jurusan = $request -> id_jurusan;
 
         // upload foto
         $image = $request -> file ('foto');
-        $image->storeAs('public/siswas', $image->hashName());
+        $image->storeAs('public/siswas/', $image->hashName());
         $siswa->foto=$image->hashName();
         $siswa->save();
         return redirect()->route('siswa.index');
@@ -113,27 +113,26 @@ class SiswaController extends Controller
             'agama'=>'required',
             'tempat_lahir'=>'required',
             'tanggal_lahir'=>'required',
-            'kelas'=>'required',
-            'jurusan'=>'required',
+            'id_kelas'=>'required',
+            'id_jurusan'=>'required',
             'foto'=>'required',
         ]);
 
         $siswa=Siswa::findOrFail($id);
-        $siswa -> nip = $request -> nip;
         $siswa -> nama = $request -> nama;
         $siswa -> jenis_kelamin = $request -> jenis_kelamin;
         $siswa -> agama = $request -> agama;
         $siswa -> tempat_lahir = $request -> tempat_lahir;
         $siswa -> tanggal_lahir = $request -> tanggal_lahir;
-        $siswa -> kelas = $request -> kelas;
-        $siswa -> jurusan = $request -> jurusan;
+        $siswa -> id_kelas = $request -> id_kelas;
+        $siswa -> id_jurusan = $request -> id_jurusan;
 
         // upload foto
         $image = $request -> file ('foto');
-        $image->storeAs('public/siswas', $image->hashName());
+        $image->storeAs('public/siswas/', $image->hashName());
 
         // delete produk
-        Storage::delete('public/siswas', $siswa->foto);
+        Storage::delete('public/siswas/', $siswa->foto);
 
         $siswa->foto=$image->hashName();
         $siswa->save();
@@ -150,7 +149,7 @@ class SiswaController extends Controller
     public function destroy($id)
     {
         $siswa=Siswa::findOrFail($id);
-        Storage::delete('public/siswas'. $siswa->foto);
+        Storage::delete('public/siswas/'. $siswa->foto);
         $siswa->delete();
         return redirect()->route('siswa.index');
     }

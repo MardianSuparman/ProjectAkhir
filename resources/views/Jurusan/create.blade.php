@@ -19,9 +19,9 @@
                         @csrf
                         <div class="mb-3">
                             <label class="form-label">Jurusan</label>
-                            <input type="text" class="form-control @error('jurusan') is-invalid @enderror" name="jurusan"
-                                value="{{ old('jurusan') }}" placeholder="jurusan" required>
-                            @error('jurusan')
+                            <input type="text" class="form-control @error('nama_jurusan') is-invalid @enderror" name="nama_jurusan"
+                                value="{{ old('nama_jurusan') }}" placeholder="Nama Jurusan" required>
+                            @error('nama_jurusan')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>

@@ -10,15 +10,15 @@ class Siswa extends Model
     use HasFactory;
 
 
-    protected $fillable = ['nama', 'jenis_kelmain','agama', 'tempat_lahir', 'tanggal_lahir', 'kelas', 'jurusan', 'foto'];
-    protected $visible = ['nama', 'jenis_kelmain','agama', 'tempat_lahir', 'tanggal_lahir', 'kelas', 'jurusan', 'foto'];
+    protected $fillable = ['nama', 'jenis_kelmain','agama', 'tempat_lahir', 'tanggal_lahir', 'id_kelas', 'id_jurusan', 'foto'];
+    protected $visible = ['nama', 'jenis_kelmain','agama', 'tempat_lahir', 'tanggal_lahir', 'id_kelas', 'id_jurusan', 'foto'];
 
     public function Kelas(){
-        return $this->belongsTo(Kelas::class, 'kelas');
+        return $this->belongsTo(Kelas::class, 'id_kelas');
     }
 
     public function Jurusan(){
-        return $this->belongsTo(Jurusan::class, 'jurusan');
+        return $this->belongsTo(Jurusan::class, 'id_jurusan');
     }
 
 }

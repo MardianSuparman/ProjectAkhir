@@ -9,15 +9,15 @@ class Kelas extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['kelas', 'wali_kelas'];
-    protected $visible = ['kelas', 'wali_kelas'];
+    protected $fillable = ['nama_kelas', 'id_guru'];
+    protected $visible = ['nama_kelas', 'id_guru'];
 
     public function Guru(){
-        return $this->belongsTo(Guru::class, 'wali_kelas');
+        return $this->belongsTo(Guru::class, 'id_guru');
     }
 
     public function Siswa(){
-        return $this->hashOne(Siswa::class, 'kelas');
+        return $this->hasMany(Siswa::class, 'id_kelas');
     }
 
 }

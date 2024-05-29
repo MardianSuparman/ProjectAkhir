@@ -40,11 +40,11 @@ class JurusanController extends Controller
     public function store(Request $request)
     {
         $this->Validate($request,[
-            'jurusan'=>'required'
+            'nama_jurusan'=>'required'
         ]);
 
         $jurusan = new jurusan();
-        $jurusan -> jurusan = $request -> jurusan;
+        $jurusan -> nama_jurusan = $request -> nama_jurusan;
 
         $jurusan->save();
         return redirect()->route('jurusan.index');
@@ -85,11 +85,11 @@ class JurusanController extends Controller
     public function update(Request $request, $id)
     {
         $this->Validate($request,[
-            'jurusan'=>'required',
+            'nama_jurusan'=>'required',
         ]);
 
         $jurusan=Jurusan::findOrFail($id);
-        $jurusan -> jurusan = $request -> jurusan;
+        $jurusan -> nama_jurusan = $request -> nama_jurusan;
 
         $jurusan->save();
         return redirect()->route('jurusan.index');

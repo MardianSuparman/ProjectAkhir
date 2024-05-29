@@ -9,11 +9,11 @@ class Jurusan extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['jurusan', 'wali_kelas'];
-    protected $visible = ['jurusan', 'wali_kelas'];
+    protected $fillable = ['nama_jurusan'];
+    protected $visible = ['nama_jurusan'];
 
     public function Siswa(){
-        return $this->hashOne(Siswa::class, 'jurusan');
+        return $this->hasMany(Siswa::class, 'id_jurusan');
     }
 
 }

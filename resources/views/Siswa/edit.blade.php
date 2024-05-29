@@ -7,34 +7,23 @@
             <div class="card">
                 <div class="card-header">
                     <div class="float-start">
-                        {{ __('guru') }}
+                        {{ __('siswa') }}
                     </div>
                     <div class="float-end">
-                        <a href="{{ route('guru.index') }}" class="btn btn-sm btn-outline-primary">Kembali</a>
+                        <a href="{{ route('siswa.index') }}" class="btn btn-sm btn-outline-primary">Kembali</a>
                     </div>
                 </div>
 
                 <div class="card-body">
-                    <form action="{{ route('guru.update', $guru->id) }}" method="POST"
+                    <form action="{{ route('siswa.update', $siswa->id) }}" method="POST"
                         enctype="multipart/form-data">
                         @method('put')
                         @csrf
 
                         <div class="mb-3">
-                            <label class="form-label">NIP</label>
-                            <input type="text" class="form-control @error('nip') is-invalid @enderror" name="nip"
-                                value="{{ $guru->nip }}" placeholder="nip " required>
-                            @error('nip')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Nama guru</label>
+                            <label class="form-label">Nama siswa</label>
                             <input type="text" class="form-control @error('nama') is-invalid @enderror" name="nama"
-                                value="{{ $guru->nama }}" placeholder="Nama Guru" required>
+                                value="{{ $siswa->nama }}" placeholder="Nama Siswa" required>
                             @error('nama')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -70,8 +59,8 @@
                         <div class="mb-3">
                             <label class="form-label">Agama</label>
                             <textarea class="form-control" class="form-control @error('agama') is-invalid @enderror"
-                                name="agama" rows="3" placeholder="agama"
-                                required>{{ $guru->agama }}</textarea>
+                                name="agama" rows="3" placeholder="Agama"
+                                required>{{ $siswa->agama }}</textarea>
                             @error('agama')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -102,9 +91,32 @@
                         </div>
 
                         <div class="mb-3">
+                            <div class="mb-3">
+                                <label for="">Kelas</label>
+                                <select name="kelas" id="" class="form-control">
+                                    @foreach ($kelas as $item)
+                                        <option value="{{$item->id}}">{{ $item->nama_kelas }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="mb-3">
+                                <label for="">Jurusan</label>
+                                <select name="jurusan" id="" class="form-control">
+                                    @foreach ($jurusan as $item)
+                                        <option value="{{$item->id}}">{{ $item->nama_jurusan }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="mb-3">
                             <label class="form-label">foto</label>
                             <input type="file" class="form-control @error('foto') is-invalid @enderror" name="foto"
-                                value="{{ $guru->foto }}"></input>
+                                value="{{ $siswa->foto }}"></input>
                             @error('foto')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>

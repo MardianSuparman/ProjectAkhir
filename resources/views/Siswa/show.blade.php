@@ -21,16 +21,17 @@
                         {{ $siswa->tempat_lahir }} , {{ $siswa->tanggal_lahir }}
                     </p>
                     <p class="tmt-3">
-                        {{ $siswa->nip }}
-                    </p>
                         {{ $siswa->agama }}
                     </p>
                     <p class="tmt-3">
                         @if ( $siswa->jenis_kelamin === 0 )
-                                Laki-laki
-                            @else
-                                Perempuan
-                            @endif
+                        Laki-laki
+                        @else
+                        Perempuan
+                        @endif
+                    </p>
+                    <p class="tmt-3">
+                        {{ $siswa->id_jurusan }} jurusan {{ $siswa->id_jurusan }}
                     </p>
                 </div>
             </div>

@@ -67,7 +67,7 @@
                         <div class="mb-3">
                             <label class="form-label">Agama</label>
                             <input type="text" class="form-control @error('agama') is-invalid @enderror" name="agama"
-                                value="{{ old('agama') }}" placeholder="agama" required>
+                                value="{{ old('agama') }}" placeholder="Agama" required>
                             @error('agama')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
