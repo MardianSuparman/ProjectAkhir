@@ -12,7 +12,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>School</title>
+    <title>Fanadesh</title>
 
 
 
@@ -30,17 +30,15 @@
     <link href="css/responsive.css" rel="stylesheet" />
 
 
-    @php
-        $guru=\App\Models\Guru::orderBy('id', 'asc')->get();
-    @endphp
+
 
     <link rel="stylesheet" href="css/css-circular-prog-bar.css">
 
 
 </head>
 
-<body>
-    <div class="top_container">
+<body class="sub_page">
+    <div class="top_container ">
         <!-- header section strats -->
         <header class="header_section">
             <div class="container">
@@ -68,11 +66,11 @@
                                 </li>
 
                                 <li class="nav-item ">
-                                    <a class="nav-link" href="{{ url('/jurusan')}}"> Jurusan </a>
+                                    <a class="nav-link" href="{{ url('/jurusan') }}"> Jurusan </a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('/guru') }}"> Guru </a>
+                                    <a class="nav-link" href="{{ url('/guru') }}">  Guru </a>
                                 </li>
 
                             </ul>
@@ -80,31 +78,6 @@
                 </nav>
             </div>
         </header>
-        <section class="hero_section ">
-            <div class="hero-container container">
-                <div class="hero_detail-box">
-                    <h1>
-                        Assalaam
-                    </h1>
-                    <p>
-                        SMK Assalaam merupakan sekolah kejuruan dengan kompetensi keahlian teknik kendaraan ringan (roda
-                        empat) plus sepeda motor dalam proses pendidikan pelatihan.
-                        Peka terhadap perubahan perkembangan teknologi baru dan tuntutan kebutuhan pasar kerja, agar
-                        lulusannya siap menghadapi perubahan.
-                    </p>
-                    <div class="hero_btn-continer">
-                        <a href="{{ url('/profil') }}" class="call_to-btn btn_white-border">
-                            Read More
-                        </a>
-                    </div>
-                </div>
-                <div class="hero_img-container">
-                    <div>
-                        <img src="images/hero.png" alt="" class="img-fluid">
-                    </div>
-                </div>
-            </div>
-        </section>
     </div>
     <!-- end header section -->
 
@@ -116,32 +89,30 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="about_img-container">
-                            <img src="images/profil.png" alt="">
+                            <img src="images/baju1.png" alt="">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="about_detail-box">
-                            <h3>
-                                About our School
-                            </h3>
+                            <h2>
+                                Rekayasa Perangkat Lunak
+                            </h2>
                             <p>
-                                SMK Assalaam merupakan sekolah kejuruan dengan kompetensi keahlian teknik kendaraan
-                                ringan (roda empat) plus sepeda motor dalam proses pendidikan pelatihan.
-                                Peka terhadap perubahan perkembangan teknologi baru dan tuntutan kebutuhan pasar kerja,
-                                agar lulusannya siap menghadapi perubahan
+                                Rekayasa Perangkat Lunak atau Rekayasa Peranti Lunak (RPL, atau dalam bahasa Inggris:
+                                Software Engineering atau SE) adalah satu bidang profesi yang mendalami cara-cara
+                                pengembangan peranti lunak termasuk pembuatan, pemeliharaan, manajemen organisasi
+                                pengembangan peranti lunak dan manajemen mutu.
                             </p>
-                            <div class="">
-                                <a href="{{ url('/profil') }}" class="call_to-btn btn_white-border">
+                            {{-- <div class="">
+                                <a href="" class="call_to-btn btn_white-border">
                                     Read More
                                 </a>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-
         <!-- end about section -->
 
         <!-- admission section -->
@@ -151,21 +122,12 @@
                     <div class="col-md-6">
                         <div class="admission_detail-box">
                             <h2>
-                                Keunggulan
+                                Teknik Otomotif Kendaraan Ringan
                             </h2>
                             <p>
-                                Program pembelajaran disusun berdasarkan standar Nasional dan dikembangkan berdasarkan
-                                kebutuhan industri serta
-                                bekerjasama dengan DU/DI (Dunia Usaha/Dunia Industri)
-                            </p>
-                            <p>
-                                Menghasilkan lulusan yang siap bekerja,memiliki mentalitas kerja yang tangguh, dan
-                                memiliki keterampilan ganda (jurusan otomotif : Mobil + Motor, jurusan RPL : programer +
-                                teknisi)
-                            </p>
-                            <p>
-                                Pengembangan karakter dibentuk atas dasar ajaran ISLAM sebagai fondasi utama dalam
-                                berbagai aktivitas siswa.
+                                Teknik Kendaraan Ringan adalah ilmu yang mempelajari tentang alat-alat transportasi
+                                darat yang menggunakan mesin, terutama mobil yang mulai berkembang sebagai cabang ilmu
+                                seiring dengan diciptakannya mesin mobil.
                             </p>
                             {{-- <div class="">
                                 <a href="" class="call_to-btn btn_white-border">
@@ -176,7 +138,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="admission_img-container">
-                            <img src="images/sakola.png" alt="">
+                            <img src="images/baju2.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -184,57 +146,44 @@
         </section>
         {{-- end admission section --}}
 
-        <!-- why section -->
-        <section class="about_section layout_padding">
-            <div class="container-title">
-                <h2>
-                    STAF GURU
-                </h2>
-                {{-- <p>
-                    It is a long established fact that a reader will be distracted by the readable content of a page
-                    when looking at
-                    its layout. The point of using Lorem
-                </p> --}}
-            </div>
 
+        <!-- about section -->
+        <section class="about_section">
             <div class="container">
-                <div class="about_card-container">
-
-                    @foreach ($guru as $item)
-
-                    <div class="about_card">
-                        <div class="about-detail">
-                            <div class="about_img-box">
-                                <img src="{{ asset('/storage/gurus/'. $item->foto) }}" class="rounded"
-                                    style="width: 150px">
-                            </div>
-                            <div class="card_detail-ox">
-                                <h4>{{ $item->nama }}</h4>
-                                <p class="tmt-3">
-                                    <small>TTL</small> <br>
-                                    {{ $item->tempat_lahir }} , {{ $item->tanggal_lahir }} <br>
-                                    <small>Agama</small> <br>
-                                    {{ $item->agama }} <br>
-                                    <small>Jenis kelamin</small> <br>
-                                    @if ( $item->jenis_kelamin === 0 )
-                                    Laki-laki
-                                    @else
-                                    Perempuan
-                                    @endif
-                                </p>
-                            </div>
-                        </div>
-                        <div class="aboute_button">
-                            <a href="{{ route('guru.show', $item->id) }}" class="about_btn ">
-                                Read More
-                            </a>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="about_img-container">
+                            <img src="images/baju3.png" alt="">
                         </div>
                     </div>
-                    @endforeach
+                    <div class="col-md-6">
+                        <div class="about_detail-box">
+                            <h2>
+                                Teknik Bisnis Sepeda Motor
+                            </h2>
+                            <p>
+                                Teknik dan Bisnis Sepeda Motor (TBSM) adalah program keahlian yang mempelajari tentang
+                                kompetensi teknik otomotif yang menekankan pada keterampilan dan pelayanan jasa mekanik
+                                kendaraan sepeda motor. Program keahlian ini, menyiapkan peserta didik untuk bekerja
+                                pada bidang pekerjaan yang dikelola oleh badan, instansi atau perusahaan maupun pribadi
+                                (wirausaha). Target lulusan dalam program keahlian TBSM ini tercapainya kompetensi dan
+                                kompetitif dalam mengarungi dunia usaha dan dunia industri
+                            </p>
+                            {{-- <div class="">
+                                <a href="" class="call_to-btn btn_white-border">
+                                    Read More
+                                </a>
+                            </div> --}}
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+        <!-- end about section -->
+
     </div>
+
+
 
     <section class="info_section layout_padding-top">
         <div class="info_logo-box">
@@ -353,7 +302,7 @@
     <!-- footer section -->
 
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="js/bootstrapUser.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
 
 
 </body>

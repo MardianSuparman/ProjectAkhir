@@ -12,7 +12,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>School</title>
+    <title>Fanadesh</title>
 
 
 
@@ -30,17 +30,16 @@
     <link href="css/responsive.css" rel="stylesheet" />
 
 
-    @php
-        $guru=\App\Models\Guru::orderBy('id', 'asc')->get();
-    @endphp
-
     <link rel="stylesheet" href="css/css-circular-prog-bar.css">
 
 
+    @php
+    $guru = \App\Models\Guru::orderBy('id', 'asc')->get();
+    @endphp
 </head>
 
-<body>
-    <div class="top_container">
+<body class="sub_page">
+    <div class="top_container ">
         <!-- header section strats -->
         <header class="header_section">
             <div class="container">
@@ -68,7 +67,7 @@
                                 </li>
 
                                 <li class="nav-item ">
-                                    <a class="nav-link" href="{{ url('/jurusan')}}"> Jurusan </a>
+                                    <a class="nav-link" href="{{ url('/jurusan') }}"> Jurusan </a>
                                 </li>
 
                                 <li class="nav-item">
@@ -80,111 +79,12 @@
                 </nav>
             </div>
         </header>
-        <section class="hero_section ">
-            <div class="hero-container container">
-                <div class="hero_detail-box">
-                    <h1>
-                        Assalaam
-                    </h1>
-                    <p>
-                        SMK Assalaam merupakan sekolah kejuruan dengan kompetensi keahlian teknik kendaraan ringan (roda
-                        empat) plus sepeda motor dalam proses pendidikan pelatihan.
-                        Peka terhadap perubahan perkembangan teknologi baru dan tuntutan kebutuhan pasar kerja, agar
-                        lulusannya siap menghadapi perubahan.
-                    </p>
-                    <div class="hero_btn-continer">
-                        <a href="{{ url('/profil') }}" class="call_to-btn btn_white-border">
-                            Read More
-                        </a>
-                    </div>
-                </div>
-                <div class="hero_img-container">
-                    <div>
-                        <img src="images/hero.png" alt="" class="img-fluid">
-                    </div>
-                </div>
-            </div>
-        </section>
     </div>
     <!-- end header section -->
 
     <div class="common_style">
 
-        <!-- about section -->
-        <section class="about_section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="about_img-container">
-                            <img src="images/profil.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="about_detail-box">
-                            <h3>
-                                About our School
-                            </h3>
-                            <p>
-                                SMK Assalaam merupakan sekolah kejuruan dengan kompetensi keahlian teknik kendaraan
-                                ringan (roda empat) plus sepeda motor dalam proses pendidikan pelatihan.
-                                Peka terhadap perubahan perkembangan teknologi baru dan tuntutan kebutuhan pasar kerja,
-                                agar lulusannya siap menghadapi perubahan
-                            </p>
-                            <div class="">
-                                <a href="{{ url('/profil') }}" class="call_to-btn btn_white-border">
-                                    Read More
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-
-        <!-- end about section -->
-
-        <!-- admission section -->
-        <section class="admission_section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="admission_detail-box">
-                            <h2>
-                                Keunggulan
-                            </h2>
-                            <p>
-                                Program pembelajaran disusun berdasarkan standar Nasional dan dikembangkan berdasarkan
-                                kebutuhan industri serta
-                                bekerjasama dengan DU/DI (Dunia Usaha/Dunia Industri)
-                            </p>
-                            <p>
-                                Menghasilkan lulusan yang siap bekerja,memiliki mentalitas kerja yang tangguh, dan
-                                memiliki keterampilan ganda (jurusan otomotif : Mobil + Motor, jurusan RPL : programer +
-                                teknisi)
-                            </p>
-                            <p>
-                                Pengembangan karakter dibentuk atas dasar ajaran ISLAM sebagai fondasi utama dalam
-                                berbagai aktivitas siswa.
-                            </p>
-                            {{-- <div class="">
-                                <a href="" class="call_to-btn btn_white-border">
-                                    Read More
-                                </a>
-                            </div> --}}
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="admission_img-container">
-                            <img src="images/sakola.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        {{-- end admission section --}}
-
-        <!-- why section -->
         <section class="about_section layout_padding">
             <div class="container-title">
                 <h2>
@@ -200,7 +100,7 @@
             <div class="container">
                 <div class="about_card-container">
 
-                    @foreach ($guru as $item)
+                @foreach ($guru as $item)
 
                     <div class="about_card">
                         <div class="about-detail">
@@ -225,16 +125,63 @@
                             </div>
                         </div>
                         <div class="aboute_button">
-                            <a href="{{ route('guru.show', $item->id) }}" class="about_btn ">
+                            <a href="{{ route('guru.show', $item->id) }}" class="about_btn " >
                                 Read More
                             </a>
                         </div>
                     </div>
-                    @endforeach
+                @endforeach
+
+                    {{-- <div class="about_card">
+                        <div class="about-detail">
+                            <div class="about_img-box">
+                                <img src="images/card-img-2.png" alt="">
+                            </div>
+                            <div class="card_detail-ox">
+                                <h4>
+                                    A PRO ARCHITECTS TEAM
+                                </h4>
+                                <p>
+                                    Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor
+                                    id nibh ultricies
+                                    vehicula ut id elit. Morbi leo risus.
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="" class="about_btn">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                    <div class="about_card">
+                        <div class="about-detail">
+                            <div class="about_img-box">
+                                <img src="images/card-img-3.png" alt="">
+                            </div>
+                            <div class="card_detail-ox">
+                                <h4>
+                                    1000+ HAPPY CUSTOMERS
+                                </h4>
+                                <p>
+                                    Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor
+                                    id nibh ultricies
+                                    vehicula ut id elit. Morbi leo risus.
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="" class="about_btn">
+                                Read More
+                            </a>
+                        </div>
+                    </div> --}}
                 </div>
             </div>
         </section>
     </div>
+
+
 
     <section class="info_section layout_padding-top">
         <div class="info_logo-box">
@@ -353,7 +300,7 @@
     <!-- footer section -->
 
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="js/bootstrapUser.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
 
 
 </body>

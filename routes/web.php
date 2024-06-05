@@ -25,9 +25,20 @@ Route::get('/user', function () {
     return view('user');
 });
 
+Route::get('/jurusan', function () {
+    return view('jurusan');
+});
+
+Route::get('/guru', function () {
+    return view('guru');
+});
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::group(['prefix'=>'admin', 'middleware'=>['auth']],function(){
 
 Route::resource('guru', App\Http\Controllers\GuruController::class)->middleware('auth');
 
@@ -38,3 +49,5 @@ Route::resource('mapel', App\Http\Controllers\MapelController::class)->middlewar
 Route::resource('jurusan', App\Http\Controllers\JurusanController::class)->middleware('auth');
 
 Route::resource('siswa', App\Http\Controllers\SiswaController::class)->middleware('auth');
+
+});

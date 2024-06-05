@@ -15,7 +15,7 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsiv">
-                        <table id="dataTable" class="table">
+                        <table class="table">
                             <thead>
                                 <tr>
                                     <td>No</td>
@@ -37,9 +37,9 @@
                                         <form action="{{ route('mapel.destroy', $data->id) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
-                                            <a href="{{ route('mapel.edit', $data->id) }}" class="btn btn-sm btn-outline-success">Edit</a> |
+                                            <a href="{{ route('mapel.edit', $data->id) }}" class="btn btn-sm btn-success">Edit</a> |
                                             <button type="submit" onclick="return confirm('Are You Sure ?');"
-                                                class="btn btn-sm btn-outline-danger">Delete</button>
+                                                class="btn btn-sm btn-danger">Delete</button>
                                         </form>
                                     </td>
                                 </tr>

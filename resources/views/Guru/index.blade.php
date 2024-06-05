@@ -15,17 +15,17 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsiv">
-                        <table id="dataTable" class="table">
+                        <table  class="table">
                             <thead>
                                 <tr>
                                     <td>No</td>
-                                    <td>nip</td>
+                                    <td>Foto</td>
                                     <td>Nama Guru</td>
+                                    <td>NIP</td>
                                     <td>jenis Kelamin</td>
-                                    <td>Agama</td>
                                     <td>Tempat Lahir</td>
                                     <td>Tanggal Lahir</td>
-                                    <td>Foto</td>
+                                    <td>Agama</td>
                                     <td>Aksi</td>
                                 </tr>
                             </thead>
@@ -34,8 +34,12 @@
                                 @forelse ( $guru as $data)
                                 <tr>
                                     <td>{{ $no++ }}</td>
-                                    <td>{{ $data->nip }}</td>
+                                    <td>
+                                        <img src="{{ asset('/storage/gurus/'. $data->foto) }}" class="rounded"
+                                            style="width: 150px">
+                                    </td>
                                     <td>{{ $data->nama }}</td>
+                                    <td>{{ $data->nip }}</td>
                                     <td>
                                         @if ( $data->jenis_kelamin === 0 )
                                             Laki-laki
@@ -43,21 +47,17 @@
                                             Perempuan
                                         @endif
                                     </td>
-                                    <td>{{ $data->agama }}</td>
                                     <td>{{ $data->tempat_lahir }}</td>
                                     <td>{{ $data->tanggal_lahir }}</td>
-                                    <td>
-                                        <img src="{{ asset('/storage/gurus/'. $data->foto) }}" class="rounded"
-                                            style="width: 150px">
-                                    </td>
+                                    <td>{{ $data->agama }}</td>
                                     <td>
                                         <form action="{{ route('guru.destroy', $data->id) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
-                                            <a href="{{ route('guru.show', $data->id) }}" class="btn btn-sm btn-outline-dark">Show</a> |
-                                            <a href="{{ route('guru.edit', $data->id) }}" class="btn btn-sm btn-outline-success">Edit</a> |
+                                            <a href="{{ route('guru.show', $data->id) }}" class="btn btn-sm btn-dark">Show</a> |
+                                            <a href="{{ route('guru.edit', $data->id) }}" class="btn btn-sm btn-success">Edit</a> |
                                             <button type="submit" onclick="return confirm('Are You Sure ?');"
-                                                class="btn btn-sm btn-outline-danger">Delete</button>
+                                                class="btn btn-sm btn-danger">Delete</button>
                                         </form>
                                     </td>
                                 </tr>

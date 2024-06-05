@@ -558,3 +558,74 @@ a:focus {
 
 
 /* end footer section*/
+
+/* about section */
+.about_section {
+    margin-top: 45px;
+    text-align: justify;
+  }
+
+  .container-title {
+    text-align: center;
+  }
+
+  .about_section h4 {
+    font-size: 22px;
+  }
+
+  .about_card-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about_card {
+    margin: 45px 20px;
+    width: 30%;
+    min-width: 300px;
+    height: 540px;
+  }
+
+  .aboute_button {
+    text-align: center;
+  }
+
+  .about_card .about-detail {
+    padding: 2px 25px 35px 25px;
+    height: 420px;
+    -webkit-box-shadow: -1px 0px 25px 9px rgba(0, 0, 0, 0.09);
+    -moz-box-shadow: -1px 0px 25px 9px rgba(0, 0, 0, 0.09);
+    box-shadow: -1px 0px 25px 9px rgba(0, 0, 0, 0.09);
+  }
+
+  .about_card .about_img-box {
+    width: 110px;
+    height: 104px;
+    margin: 50px auto;
+
+  }
+
+  .about_card .about-detail p {
+    margin-top: 15px;
+  }
+
+  .about_card img {
+    width: 100%;
+    border-radius: 50%;
+  }
+
+  .about_card a {
+    display: inline-block;
+    padding: 8px 25px;
+    border: 2px solid #c4d70f;
+    color: #c4d70f;
+    border-radius: 35px;
+    margin-top: 55px;
+  }
+
+  .about_card a:hover {
+    background-color: #c4d70f;
+    color: #fefeff;
+  }
+
+
+  /* end about section */
