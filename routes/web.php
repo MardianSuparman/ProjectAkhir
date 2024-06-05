@@ -14,7 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('view');
+    return view('user');
+});
+
+Route::get('/profil', function () {
+    return view('profil');
+});
+
+Route::get('/user', function () {
+    return view('user');
 });
 
 Auth::routes();
